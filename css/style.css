@@ -1,6 +1,7 @@
 /* google fornt inter  */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+
 :root {
     --primary-font: 'Inter', sans-serif;
     /* --primary-color: #2563eb; 
@@ -35,3 +36,5 @@ h1, h2, h3, h4, h5, h6 {
 p {
     font-weight: 400; 
 }
+
+@import url('footer.css');
