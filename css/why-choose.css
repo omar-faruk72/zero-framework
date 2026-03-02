@@ -1,0 +1,92 @@
+.why-choose {
+    padding: 100px 0;
+    background-color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+.choose-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 60px;
+    align-items: center; /* লেখা এবং ইমেজ লম্বালম্বিভাবে মাঝখানে থাকবে */
+}
+
+.choose-text { 
+    flex: 1; 
+}
+
+.choose-gallery { 
+    flex: 1; 
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.choose-gallery img {
+    width: 100%;
+    max-width: 600px; /* ইমেজের সর্বোচ্চ চওড়া নির্ধারণ */
+    height: auto;
+    border-radius: 24px; /* সুন্দর রাউন্ডেড কর্নার */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08); /* হালকা শ্যাডো যাতে ইমেজটি ভেসে থাকে */
+    display: block;
+}
+
+/* টেক্সট ও টাইটেল স্টাইল */
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.section-title span { 
+    color: #82b1ad; 
+}
+
+.section-desc {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* ফিচার আইটেম স্টাইল */
+.feature-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.feature-item .icon { 
+    color: #82b1ad; 
+    font-size: 20px; 
+}
+
+.feature-item h3 { 
+    font-size: 18px; 
+    color: #333; 
+    margin-bottom: 5px; 
+}
+
+.feature-item p { 
+    font-size: 14px; 
+    color: #777; 
+    line-height: 1.4; 
+}
+
+/* রেসপন্সিভ - মোবাইল ও ট্যাবলেটের জন্য */
+@media (max-width: 992px) {
+    .choose-container {
+        flex-direction: column; 
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .feature-item {
+        text-align: left; 
+    }
+
+    .choose-gallery {
+        justify-content: center;
+    }
+}
