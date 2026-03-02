@@ -17,6 +17,8 @@ async function loadComponent(id, path) {
 async function loadLayout() {
     // header lod
     await loadComponent('header-placeholder', '/shared/header.html');
+    // touch section lod
+    loadComponent('touch-section', '/home-page/get-in-touch.html');
     // contact lod
     loadComponent('contact-info-section', '/home-page/contact-info.html');
     // brands lod

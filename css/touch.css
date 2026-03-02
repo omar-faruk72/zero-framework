@@ -1,0 +1,126 @@
+/* css/touch.css */
+.get-in-touch {
+    padding: 80px 0;
+    background-color: #f9f9f9; /* হালকা ব্যাকগ্রাউন্ড */
+}
+
+.touch-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 40px;
+    align-items: stretch; /* ইমেজ আর ফর্ম যাতে সমান লম্বা হয় */
+}
+
+/* ইমেজ স্টাইল */
+.touch-image {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.touch-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ইমেজ যাতে নষ্ট না হয় */
+    display: block;
+}
+
+/* ফর্ম স্টাইল */
+.touch-form-wrapper {
+    flex: 1;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.touch-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.touch-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #82b1ad;
+    outline: none;
+    box-shadow: 0 0 5px rgba(130, 177, 173, 0.3);
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: none;
+}
+
+.form-checkbox {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.form-checkbox label {
+    font-size: 12px;
+    color: #777;
+    line-height: 1.5;
+}
+
+/* সাবমিট বাটন */
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background-color: #82b1ad; /* আপনার টিল কালার */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #6a9692;
+}
+
+/* রেসপন্সিভ */
+@media (max-width: 992px) {
+    .touch-container {
+        flex-direction: column;
+    }
+    .touch-image {
+        height: 300px;
+    }
+}
