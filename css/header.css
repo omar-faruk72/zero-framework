@@ -26,9 +26,6 @@
     text-decoration: none;
 }
 
-
-
-
 .nav-links {
     list-style: none;
     display: flex;
@@ -36,5 +33,10 @@
 }
 .nav-links li a {
     text-decoration: none;
+}
+/* group-bnt */
+.group-btn {
+    display: flex;
+    gap: 20px;
 }
 

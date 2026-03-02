@@ -13,21 +13,18 @@
     cursor: pointer;
 }
 
-/* সলিড বাটন (টিল কালার) */
 .btn-solid {
     background-color: #82b1ad;
     color: white;
     border: none;
 }
 
-/* আউটলাইন বাটন */
 .btn-outline {
     background-color: transparent;
     color: white;
     border: 2px solid white;
 }
 
-/* আইকন স্টাইল */
 .btn-icon {
     margin-left: 10px;
     font-size: 18px;
