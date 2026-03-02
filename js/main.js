@@ -19,8 +19,7 @@ async function loadLayout() {
     await loadComponent('header-placeholder', '/shared/header.html');
 
     // footer load
-    await loadComponent('footer-placeholder', '/shared/footer.html');
-
+loadComponent('footer-placeholder', '/shared/footer.html');
     // button load
     await loadComponent('hero-btn-solid', '/shared/btn-solid.html');
     await loadComponent('hero-btn-outline', '/shared/btn-outline.html');

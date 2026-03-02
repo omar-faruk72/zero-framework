@@ -1,0 +1,126 @@
+.main-footer {
+    background-color: #82b1ad; /* আপনার স্ক্রিনশটের টিল কালার */
+    color: white;
+    padding: 60px 0 20px 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-container {
+    max-width: 1280px; /* আপনার রিকোয়ারমেন্ট অনুযায়ী */
+    margin: 0 auto;    /* মাঝখানে রাখার জন্য */
+    padding: 0 20px;   /* ছোট স্ক্রিনে ডানে-বামে একটু গ্যাপ */
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    width: 300px;
+    filter: brightness(0) invert(1); 
+}
+
+.logo-text .brand {
+    display: block;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.logo-text .sub-brand {
+    font-size: 14px;
+}
+
+.footer-desc {
+    font-style: italic;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.footer-col h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer-links, .contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li, .contact-info li {
+    margin-bottom: 12px;
+    font-size: 14px;
+    display: flex;
+    gap: 10px;
+    opacity: 0.9;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.legal-links {
+    display: flex;
+    gap: 20px;
+}
+
+.legal-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
