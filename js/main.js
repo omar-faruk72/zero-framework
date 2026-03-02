@@ -17,6 +17,7 @@ async function loadComponent(id, path) {
 async function loadLayout() {
     // header lod
     await loadComponent('header-placeholder', '/shared/header.html');
+    loadComponent('scan-section-placeholder', '/home-page/invisalign-scan.html');
     loadComponent('why-choose-section', '/home-page/why-choose.html');
     // touch section lod
     loadComponent('touch-section', '/home-page/get-in-touch.html');
