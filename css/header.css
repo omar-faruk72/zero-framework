@@ -5,7 +5,8 @@
     background-position: center; 
     background-repeat: no-repeat;
        padding-top: 16px;
-    padding-bottom: 948px;
+   
+    
 }
 
 /* logo-navbar */
@@ -34,9 +35,25 @@
 .nav-links li a {
     text-decoration: none;
 }
+
+/* mid contnet */
+.mid-content{
+    margin-top: 200px;
+    padding-bottom: 300px;
+    width: 850px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
 /* group-bnt */
 .group-btn {
     display: flex;
     gap: 20px;
+    width: 500px;
+    margin-top: 16px;
+     text-align: center;
+     margin-left: auto;
+    margin-right: auto;
 }
 
