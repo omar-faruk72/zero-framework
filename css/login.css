@@ -1,0 +1,112 @@
+/* css/login.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.login-card h2 {
+    color: #1c1e21;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 26px;
+}
+
+.login-card p {
+    color: #606770;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #4b4f56;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #1877f2;
+    box-shadow: 0 0 0 2px #e7f3ff;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1877f2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #166fe5;
+}
+
+.message {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    min-height: 20px;
+}
+
+.footer-text {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 14px;
+    color: #606770;
+}
+
+.footer-text a {
+    color: #1877f2;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
