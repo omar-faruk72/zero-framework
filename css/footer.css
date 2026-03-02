@@ -1,14 +1,14 @@
 .main-footer {
-    background-color: #82b1ad; /* আপনার স্ক্রিনশটের টিল কালার */
+    background-color: #82b1ad; 
     color: white;
     padding: 60px 0 20px 0;
     font-family: 'Inter', sans-serif;
 }
 
 .footer-container {
-    max-width: 1280px; /* আপনার রিকোয়ারমেন্ট অনুযায়ী */
-    margin: 0 auto;    /* মাঝখানে রাখার জন্য */
-    padding: 0 20px;   /* ছোট স্ক্রিনে ডানে-বামে একটু গ্যাপ */
+    max-width: 1280px; 
+    margin: 0 auto;    
+    padding: 0 20px; 
 }
 
 .footer-top {

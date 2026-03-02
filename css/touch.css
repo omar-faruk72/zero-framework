@@ -1,7 +1,7 @@
 /* css/touch.css */
 .get-in-touch {
     padding: 80px 0;
-    background-color: #f9f9f9; /* হালকা ব্যাকগ্রাউন্ড */
+    background-color: #f9f9f9; 
 }
 
 .touch-container {
@@ -10,10 +10,9 @@
     padding: 0 20px;
     display: flex;
     gap: 40px;
-    align-items: stretch; /* ইমেজ আর ফর্ম যাতে সমান লম্বা হয় */
+    align-items: stretch; 
 }
 
-/* ইমেজ স্টাইল */
 .touch-image {
     flex: 1;
     border-radius: 20px;
@@ -23,11 +22,10 @@
 .touch-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* ইমেজ যাতে নষ্ট না হয় */
+    object-fit: cover; 
     display: block;
 }
 
-/* ফর্ম স্টাইল */
 .touch-form-wrapper {
     flex: 1;
     background: white;
@@ -97,11 +95,10 @@
     line-height: 1.5;
 }
 
-/* সাবমিট বাটন */
 .btn-submit {
     width: 100%;
     padding: 15px;
-    background-color: #82b1ad; /* আপনার টিল কালার */
+    background-color: #82b1ad; 
     color: white;
     border: none;
     border-radius: 8px;
@@ -115,7 +112,6 @@
     background-color: #6a9692;
 }
 
-/* রেসপন্সিভ */
 @media (max-width: 992px) {
     .touch-container {
         flex-direction: column;

@@ -10,10 +10,9 @@
     padding: 0 20px;
     display: flex;
     align-items: center;
-    gap: 50px; /* ম্যাপ আর টেক্সটের মাঝখানের গ্যাপ */
+    gap: 50px; 
 }
 
-/* ম্যাপের স্টাইল */
 .map-wrapper {
     flex: 1;
     border-radius: 15px;
@@ -21,7 +20,6 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-/* কন্টাক্ট ডিটেইলস স্টাইল */
 .contact-details {
     flex: 1;
 }
@@ -29,7 +27,7 @@
 .contact-title {
     font-size: 36px;
     font-weight: 700;
-    color: #82b1ad; /* আপনার টিল কালার */
+    color: #82b1ad; 
     margin-bottom: 15px;
     font-family: 'Inter', sans-serif;
 }
@@ -58,13 +56,12 @@
 .info-list li i {
     color: #82b1ad;
     font-size: 18px;
-    width: 25px; /* আইকনগুলো সমান লাইনে রাখার জন্য */
+    width: 25px; 
 }
 
-/* মোবাইলের জন্য রেসপন্সিভ */
 @media (max-width: 992px) {
     .contact-container {
-        flex-direction: column; /* ছোট স্ক্রিনে ম্যাপ উপরে, লেখা নিচে */
+        flex-direction: column; 
         text-align: center;
     }
     
