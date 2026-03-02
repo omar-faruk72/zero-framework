@@ -1,0 +1,60 @@
+/* css/brands.css */
+.trusted-brands {
+    padding: 60px 0;
+    background-color: #fff; /* সাদা ব্যাকগ্রাউন্ড */
+    text-align: center;
+}
+
+.brands-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.brands-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 40px;
+    font-family: 'Inter', sans-serif;
+}
+
+.brands-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap; /* ছোট স্ক্রিনে যাতে নিচে নিচে নামে */
+}
+
+.brand-item {
+    flex: 1;
+    min-width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-item img {
+    max-width: 100%;
+    height: auto;
+    max-height: 60px; /* লোগোগুলো এক সাইজে রাখার জন্য */
+    filter: grayscale(100%); /* প্রফেশনাল লুকের জন্য গ্রে-স্কেল (ঐচ্ছিক) */
+    opacity: 0.7;
+    transition: 0.3s ease;
+}
+
+.brand-item img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* মোবাইলের জন্য রেসপন্সিভ */
+@media (max-width: 768px) {
+    .brands-grid {
+        justify-content: center;
+    }
+    .brand-item {
+        flex: 0 0 40%; /* এক লাইনে ২টা করে দেখাবে */
+    }
+}
