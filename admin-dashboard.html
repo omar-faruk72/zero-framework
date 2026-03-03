@@ -3,34 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-    <style>
-        body { font-family: sans-serif; padding: 50px; background: #f4f4f4; }
-        .dashboard-card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h1 { color: #333; }
-        .logout-btn { background: #ff4444; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; }
-    </style>
+    <title>Admin Dashboard | Manage Services</title>
+    <link rel="stylesheet" href="css/admin.css">
 </head>
 <body>
-    <div class="dashboard-card">
-        <h1>Welcome Admin!</h1>
-        <p>This is your secure control panel.</p>
+    <div class="sidebar">
+        <h2>Admin Panel</h2>
+        <p id="admin-email"></p>
         <button class="logout-btn" onclick="logout()">Logout</button>
     </div>
 
-    <script>
-        const role = localStorage.getItem('userRole');
-        const token = localStorage.getItem('token');
+    <div class="main-content">
+        <div class="header">
+            <h1>Welcome Admin!</h1>
+            <p>Fill out the form below to add a new service.</p>
+        </div>
 
-        if (!token || role !== 'admin') {
-            alert("Access Denied! Admins only.");
-            window.location.href = 'login.html';
-        }
+        <div class="form-container">
+            <h3>Add New Service</h3>
+            <form id="service-form">
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label>Service Name</label>
+                        <input type="text" id="serviceName" placeholder="e.g. Web Design" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Service Category</label>
+                        <input type="text" id="category" placeholder="e.g. Technology" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Price ($)</label>
+                        <input type="number" id="price" placeholder="e.g. 500" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Duration</label>
+                        <input type="text" id="duration" placeholder="e.g. 5 Days" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Contact Email</label>
+                        <input type="email" id="contactEmail" placeholder="support@mail.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Image URL</label>
+                        <input type="url" id="imageUrl" placeholder="https://image-link.com" required>
+                    </div>
+                    <div class="input-group full-width">
+                        <label>Service Description</label>
+                        <textarea id="description" rows="4" placeholder="Describe the service..." required></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Add Service</button>
+            </form>
+            <div id="msg" class="message"></div>
+        </div>
+    </div>
 
-        function logout() {
-            localStorage.clear();
-            window.location.href = 'login.html';
-        }
-    </script>
+    <script src="js/admin.js"></script>
 </body>
 </html>
