@@ -25,6 +25,7 @@ if (regForm) {
             if (response.ok) { 
                 msg.style.color = "green";
                 msg.innerText = "Registration Successful!";
+                console.log(response)
                 setTimeout(() => window.location.href = 'login.html', 2000);
             } else {
                 msg.style.color = "red";
@@ -37,7 +38,7 @@ if (regForm) {
 }
 
 // ==========================================
-// 2. Login (Handling your specific Server Output)
+// 2. Login (Modified for Admin Redirection)
 // ==========================================
 if (loginForm) {
     loginForm.addEventListener('submit', async (e) => {
@@ -53,23 +54,33 @@ if (loginForm) {
             });
 
             const result = await response.json();
-            console.log("Server Data:", result); 
 
             if (response.ok) {
-             
-                const token = result.token || (result.data && result.data.token);
+           
+                const token = result.data.token;
+                const user = result.data.user;
 
                 if (token) {
-                    localStorage.setItem('token', token); 
+                    localStorage.setItem('token', token);
+                    localStorage.setItem('userRole', user.role); 
+
                     msg.style.color = "green";
                     msg.innerText = "Login Successful! Redirecting...";
-                    setTimeout(() => window.location.href = 'index.html', 1500);
+
+                    setTimeout(() => {
+                        if (user.role === 'admin') {
+                            window.location.href = 'admin-dashboard.html';
+                        } else {
+                            window.location.href = 'index.html';
+                        }
+                    }, 1500);
                 }
             } else {
                 msg.style.color = "red";
                 msg.innerText = result.message || "Invalid Email or Password";
             }
         } catch (error) {
+            console.error("Login Error:", error);
             msg.innerText = "Check your server connection!";
         }
     });

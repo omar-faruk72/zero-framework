@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body { font-family: sans-serif; padding: 50px; background: #f4f4f4; }
+        .dashboard-card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1 { color: #333; }
+        .logout-btn { background: #ff4444; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="dashboard-card">
+        <h1>Welcome Admin!</h1>
+        <p>This is your secure control panel.</p>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <script>
+        const role = localStorage.getItem('userRole');
+        const token = localStorage.getItem('token');
+
+        if (!token || role !== 'admin') {
+            alert("Access Denied! Admins only.");
+            window.location.href = 'login.html';
+        }
+
+        function logout() {
+            localStorage.clear();
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>
