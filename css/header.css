@@ -1,17 +1,16 @@
-.main-header{
+/* Main Header */
+.main-header {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/assets/images/hero-bg.jpg');
-    
     background-size: cover;      
     background-position: center; 
     background-repeat: no-repeat;
-       padding-top: 16px;
-   
-    
+    padding-top: 16px;
+    min-height: 100vh; 
 }
 
 /* logo-navbar */
-.logo-navbar{
-   display: flex;
+.logo-navbar {
+    display: flex;
     justify-content: space-between;
     align-items: center;       
     width: 100%;
@@ -23,37 +22,131 @@
     display: block; 
 }
 
-.logo a {
-    text-decoration: none;
-}
-
 .nav-links {
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 20px;
 }
+
 .nav-links li a {
     text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
 }
 
-/* mid contnet */
-.mid-content{
-    margin-top: 200px;
-    padding-bottom: 300px;
-    width: 850px;
+/* Login & Register Button Styling */
+.login-btn {
+    border: 1px solid aqua;
+    padding: 8px 20px;
+    border-radius: 5px;
+    color: aqua !important;
+}
+
+.login-btn:hover {
+    background: aqua;
+    color: black !important;
+}
+
+.register-btn {
+    background: aqua;
+    padding: 8px 20px;
+    border-radius: 5px;
+    color: black !important;
+    font-weight: bold;
+    border: 1px solid aqua;
+}
+
+.register-btn:hover {
+    background: transparent;
+    color: aqua !important;
+}
+
+/* Mid Content */
+.mid-content {
+    margin-top: 150px;
+    padding-bottom: 200px;
+    width: 100%;
+    max-width: 850px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-
 }
-/* group-bnt */
+
+.main-title {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.smole-text {
+    margin: 20px 0;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Group Button */
 .group-btn {
     display: flex;
     gap: 20px;
-    width: 500px;
-    margin-top: 16px;
-     text-align: center;
-     margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
+    margin-top: 30px;
 }
 
+/* =============================================
+   RESPONSIVE SECTION (Media Queries)
+   ============================================= */
+
+@media screen and (max-width: 1024px) {
+    .mid-content {
+        width: 90%;
+        margin-top: 120px;
+    }
+    .main-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo-navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .mid-content {
+        margin-top: 80px;
+        padding-bottom: 100px;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .group-btn {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav-links {
+        gap: 10px;
+    }
+    
+    .nav-links li a {
+        font-size: 13px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .main-title {
+        font-size: 1.6rem;
+    }
+}
