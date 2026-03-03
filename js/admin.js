@@ -26,7 +26,7 @@ if (serviceForm) {
         };
 
         try {
-            const response = await fetch('http://localhost:8000/add-services', {
+            const response = await fetch('https://zero-framework-server.vercel.app/add-services', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

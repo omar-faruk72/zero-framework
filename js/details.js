@@ -8,7 +8,7 @@ async function loadServiceDetails() {
     }
 
     try {
-        const response = await fetch(`http://127.0.0.1:8000/service/${serviceId}`);
+        const response = await fetch(`https://zero-framework-server.vercel.app/service/${serviceId}`);
         const result = await response.json();
 
         if (result.status) {

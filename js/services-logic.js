@@ -8,7 +8,7 @@ async function displayServices(page = 1) {
     }
 
     try {
-        const response = await fetch(`http://127.0.0.1:8000/all-services?page=${page}&limit=${serviceLimit}`);
+        const response = await fetch(`https://zero-framework-server.vercel.app/all-services?page=${page}&limit=${serviceLimit}`);
         const result = await response.json();
 
         if (result.status && result.data.services.length > 0) {
