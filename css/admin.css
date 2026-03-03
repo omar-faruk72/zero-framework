@@ -25,3 +25,61 @@ body { display: flex; background-color: #f0f2f5; min-height: 100vh; }
 .submit-btn:hover { background: #219150; }
 
 .message { margin-top: 15px; font-weight: 500; }
+@media screen and (max-width: 992px) {
+    .sidebar {
+        width: 200px;
+        padding: 20px 15px;
+    }
+    .main-content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+        padding: 30px;
+    }
+    .form-grid {
+        grid-template-columns: 1fr; 
+    }
+    .full-width {
+        grid-column: span 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 20px;
+        text-align: center;
+    }
+    .sidebar h2 {
+        margin-bottom: 10px;
+    }
+    .logout-btn {
+        width: auto;
+        padding: 8px 25px;
+        margin-top: 10px;
+    }
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+    .form-container {
+        padding: 20px;
+    }
+    .header h1 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header h1 {
+        font-size: 20px;
+    }
+    .submit-btn {
+        width: 100%; 
+    }
+}
