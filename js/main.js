@@ -1,3 +1,5 @@
+// js/main.js
+
 async function loadComponent(id, path) {
     const element = document.getElementById(id);
     if (element) {
@@ -5,30 +7,30 @@ async function loadComponent(id, path) {
             const res = await fetch(path);
             if (res.ok) {
                 element.innerHTML = await res.text();
-            } else {
-                console.error(`${path} `);
+                return true; 
             }
         } catch (err) {
-            console.error(`${id} `, err);
+            console.error(`Error loading ${id}:`, err);
         }
     }
+    return false;
 }
 
 async function loadLayout() {
-    // header lod
     await loadComponent('header-placeholder', '/shared/header.html');
+    
+    const serviceLoaded = await loadComponent('services', '/home-page/services.html');
+    if (serviceLoaded) {
+        displayServices(); 
+    }
+
     loadComponent('scan-section-placeholder', '/home-page/invisalign-scan.html');
     loadComponent('why-choose-section', '/home-page/why-choose.html');
-    // touch section lod
     loadComponent('touch-section', '/home-page/get-in-touch.html');
-    // contact lod
     loadComponent('contact-info-section', '/home-page/contact-info.html');
-    // brands lod
- loadComponent('brands-section', '/home-page/brands.html');
-
-    // footer load
-loadComponent('footer-placeholder', '/shared/footer.html');
-    // button load
+    loadComponent('brands-section', '/home-page/brands.html');
+    loadComponent('footer-placeholder', '/shared/footer.html');
+    
     await loadComponent('hero-btn-solid', '/shared/btn-solid.html');
     await loadComponent('hero-btn-outline', '/shared/btn-outline.html');
 }
