@@ -1,0 +1,141 @@
+.details-container {
+    max-width: 1280px;
+    margin: 50px auto;
+    padding: 0 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.details-main {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 60px;
+    align-items: flex-start;
+}
+
+.details-image-box {
+    flex: 1.2;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.details-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details-info-box {
+    flex: 1;
+}
+
+.detail-category {
+    color: #7da5a0;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.detail-title {
+    font-size: 36px;
+    color: #333;
+    margin: 10px 0 25px 0;
+    line-height: 1.2;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.info-item {
+    background: #f8fbfb;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.info-label {
+    display: block;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.info-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.contact-box {
+    margin-bottom: 30px;
+}
+
+.contact-box p {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.contact-box a {
+    color: #7da5a0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.btn-book {
+    width: 100%;
+    background: #7da5a0;
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-book:hover {
+    background: #6a928e;
+    transform: translateY(-3px);
+}
+
+.desc-section {
+    margin-top: 40px;
+}
+
+.desc-section h2 {
+    color: #7da5a0;
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f4f3;
+    padding-bottom: 12px;
+}
+
+.desc-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+.list-item {
+    background: #fdfdfd;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    display: flex;
+    gap: 15px;
+    border-left: 5px solid #7da5a0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+@media (max-width: 992px) {
+    .details-main { flex-direction: column; }
+    .details-image-box { width: 100%; height: 350px; }
+}

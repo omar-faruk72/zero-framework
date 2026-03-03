@@ -2,19 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Service Details</title>
-    <link rel="stylesheet" href="css/style.css"> </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Details | OrthoClinic</title>
+    <link rel="stylesheet" href="css/style.css"> <link rel="stylesheet" href="css/details.css"> </head>
 <body>
-    <div id="header-placeholder"></div>
+    <section class="details-section">
+    <div class="details-container">
+        <div class="details-main">
+            <div class="details-image-box">
+                <img id="service-img" src="" alt="Service Image">
+            </div>
+            
+            <div class="details-info-box">
+                <span id="service-cat" class="detail-category"></span>
+                <h1 id="service-name" class="detail-title"></h1>
+                
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-label">Price</span>
+                        <span id="service-price" class="info-value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Duration</span>
+                        <span id="service-duration" class="info-value"></span>
+                    </div>
+                </div>
 
-    <div class="container" style="max-width: 1280px; margin: 50px auto; padding: 0 20px;">
-        <div id="service-details-content">
-            <h2>Loading details...</h2>
+                <div class="contact-box">
+                    <p>For inquiries, email us at:</p>
+                    <a id="service-email" href=""></a>
+                </div>
+
+                 <a href="index.html" class="btn-book">← Back to Services</a>
+            </div>
+        </div>
+
+        <div class="details-content">
+            <div id="service-description" class="formatted-desc">
+                </div>
         </div>
     </div>
+</section>
 
-    <div id="footer-placeholder"></div>
-
-    <script src="js/details.js"></script>
+    <script src="js/main.js"></script> <script src="js/details.js"></script>
 </body>
 </html>
