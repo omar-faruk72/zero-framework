@@ -1,9 +1,11 @@
 let currentServicePage = 1;
 const serviceLimit = 4;
-
 async function displayServices(page = 1) {
     const grid = document.getElementById('services-grid');
-    if (!grid) return;
+    if (!grid) {
+        setTimeout(() => displayServices(page), 100);
+        return;
+    }
 
     try {
         const response = await fetch(`http://127.0.0.1:8000/all-services?page=${page}&limit=${serviceLimit}`);
@@ -14,7 +16,7 @@ async function displayServices(page = 1) {
             
             result.data.services.forEach(service => {
                 grid.innerHTML += `
-                    <div class="service-card">
+                    <div class="service-card" onclick="goToDetails('${service._id}')" style="cursor:pointer;">
                         <div class="service-img-container">
                             <img src="${service.imageUrl || 'https://via.placeholder.com/300x400'}" alt="${service.name}">
                         </div>
@@ -28,11 +30,10 @@ async function displayServices(page = 1) {
             grid.innerHTML = "<p>No services found.</p>";
         }
     } catch (error) {
-        console.error("Error:", error);
-        grid.innerHTML = "<p style='color:red;'>Failed to load services.</p>";
+        console.error("Error fetching services:", error);
+        grid.innerHTML = "<p style='color:red;'>Failed to load services. Please check your connection.</p>";
     }
 }
-
 function renderPaginationControls(totalPages, activePage) {
     const container = document.getElementById('pagination-controls');
     if (!container) return;
@@ -42,14 +43,23 @@ function renderPaginationControls(totalPages, activePage) {
     for (let i = 1; i <= totalPages; i++) {
         const btn = document.createElement('button');
         btn.innerHTML = i; 
-        if (i === activePage) btn.classList.add('active');
+        if (i === activePage) {
+            btn.classList.add('active');
+        }
         
-        btn.onclick = () => {
+        btn.onclick = (e) => {
+            e.stopPropagation(); 
             currentServicePage = i;
             displayServices(i);
         };
         container.appendChild(btn);
     }
+}
+
+function goToDetails(id) {
+    if (!id) return;
+    console.log("Navigating to service details for ID:", id);
+    window.location.href = `service-details.html?id=${id}`;
 }
 
 displayServices(currentServicePage);
